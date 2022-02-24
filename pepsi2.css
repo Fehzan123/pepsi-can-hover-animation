@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.cerd{
+    position: absolute;
+    height: 25rem;
+    width: 15rem;
+    /* background: red; */
+    border-radius: 1.5rem;
+}
+.cerd .circl{
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(100px at center);
+    background: rgba(76, 76, 165, 0.808);
+    transition: 0.5s;
+
+}
+.cerd:hover .circl{
+    position: absolute;
+    clip-path: circle(400px at center);
+    transition: 0.5s;
+    border-radius: 1.5rem;
+}
+.cerd img {
+    position: absolute;
+    height: 20rem;
+    left: 2rem;
+    top: 2rem;
+    pointer-events: none;
+    /* animation: anim 1s; */
+    
+}
+.cerd:hover img{
+    content: '';
+    position: absolute;
+    display: flex;
+    top: -6rem;
+    pointer-events: none;
+    animation: anim 1s;
+    /* transform: rotate(360deg); */
+    
+
+}
+.cerd .contener{
+position: absolute;
+align-items: center;
+justify-content: center;
+top: 7rem;
+left: 1rem;
+visibility: hidden;
+opacity: 0;
+
+
+}
+.cerd:hover .contener{
+    content: '';
+    position: absolute;
+    top: 18rem;
+    visibility: visible;
+    opacity: 1;
+}
+h1{
+    color: white;
+    position: absolute;
+    left: 2rem;
+    top: -3rem;
+}
+
+@keyframes anim {
+    100%{
+        transform: rotate(360deg);
+    }
+
+   
+}
